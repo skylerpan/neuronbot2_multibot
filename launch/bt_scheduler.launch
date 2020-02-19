@@ -1,0 +1,6 @@
+<launch>
+    <arg name="bt_file" default="$(find neuronbot2_multibot)/cfg/multi_bt.xml" />
+    <node name="bt_scheduler" pkg="neuronbot2_multibot" type="node" output="screen" >
+        <param name="file" value="$(arg bt_file)" />
+    </node>
+</launch>

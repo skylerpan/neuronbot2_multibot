@@ -1,6 +1,7 @@
 # NeuronBot2 Multibot
 ## Installzation
 ```bash
+source /opt/ros/melodic/setup.bash
 mkdir -p ~/multibot_ws/src/neuronbot2
 cd ~/multibot_ws/src/neuronbot2
 git clone https://github.com/skylerpan/neuronbot2_multibot

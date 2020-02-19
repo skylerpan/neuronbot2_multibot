@@ -1,4 +1,4 @@
-# neuronbot2_multibot
+# NeuronBot2 Multibot
 ## Installzation
 ```bash
 mkdir -p ~/multibot_ws/src/neuronbot2
@@ -10,4 +10,13 @@ mv neuronbot2/* .. && rm neuronbot2 -rf
 cd ~/multibot_ws
 rosdep install --from-path src --ignore-src -r -y
 catkin_make
+```
+## Setup ROS1 environment
+```bash
+source /opt/ros/melodic/setup.bash
+source ~/multibot_ws/devel/setup.bash
+```
+## Run NeuronBot2 Multibot
+```bash
+roslaunch neuronbot2_multibot start.launch
 ```

@@ -11,9 +11,10 @@ find_package(catkin REQUIRED COMPONENTS
   actionlib
   actionlib_msgs
   behaviortree_cpp_v3
-  neuronbot2_description
-  neuronbot2_gazebo
-  neuronbot2_nav
+  # neuronbot2_description
+  # neuronbot2_gazebo
+  # neuronbot2_nav
+  # multibot_layers
   roscpp
   std_msgs
   turtlebot3_gazebo
@@ -111,7 +112,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES neuronbot2_multibot
-  CATKIN_DEPENDS actionlib actionlib_msgs behaviortree_cpp_v3 neuronbot2_description neuronbot2_gazebo neuronbot2_nav roscpp std_msgs turtlebot3_gazebo
+  CATKIN_DEPENDS actionlib actionlib_msgs behaviortree_cpp_v3 neuronbot2_description neuronbot2_gazebo neuronbot2_nav roscpp std_msgs turtlebot3_gazebo multibot_layers
   DEPENDS system_lib
 )
 

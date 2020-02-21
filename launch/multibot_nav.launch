@@ -7,6 +7,7 @@
         <arg name="y_pos" value=" 2.0"/>
         <arg name="yaw" value=" 1.57"/>
     </include>
+    <rosparam command="load" ns="" file="$(find neuronbot2_multibot)/params/multilayer_costmap.yaml" />
     <include file="$(find neuronbot2_nav)/launch/neuronbot2_nav.launch">
         <arg name="namespace" value="nb2_1"/>
 	    <arg name="map_name" value="$(arg map_name)" />
@@ -14,6 +15,7 @@
         <arg name="y_pos" value="-1.0"/>
         <arg name="yaw" value=" 1.57"/>
     </include>
+    <rosparam command="load" ns="nb2_1" file="$(find neuronbot2_multibot)/params/multilayer_costmap.yaml" />
     <include file="$(find neuronbot2_nav)/launch/neuronbot2_nav.launch">
         <arg name="namespace" value="nb2_2"/>
 	    <arg name="map_name" value="$(arg map_name)" />
@@ -21,5 +23,6 @@
         <arg name="y_pos" value=" 3.0"/>
         <arg name="yaw" value=" 0.0"/>
     </include>
+    <rosparam command="load" ns="nb2_2" file="$(find neuronbot2_multibot)/params/multilayer_costmap.yaml" />
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find neuronbot2_multibot)/rviz/view_navigation_multibot.rviz" />
 </launch>

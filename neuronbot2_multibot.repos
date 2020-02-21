@@ -3,3 +3,7 @@ repositories:
     type: git
     url: https://github.com/skylerpan/neuronbot2.git
     version: melodic-dev
+  ../multibot_layer:
+    type: git
+    url: https://github.com/skylerpan/multibot_layer.git
+    version: nb2

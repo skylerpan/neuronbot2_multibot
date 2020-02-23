@@ -1,10 +1,9 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 81
+    Help Height: 70
     Name: Displays
     Property Tree Widget:
       Expanded:
-        - /Global Options1
         - /TF1/Frames1
         - /TF1/Tree1
         - /Odometry1/Odometry1/Shape1
@@ -14,7 +13,7 @@ Panels:
         - /Global Cost Map1//1/Full Plan1
         - /Global Cost Map1//1/Goal1
       Splitter Ratio: 0.5
-    Tree Height: 452
+    Tree Height: 371
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -66,6 +65,8 @@ Visualization Manager:
           Value: true
         base_link:
           Value: true
+        camera_link:
+          Value: true
         imu_link:
           Value: true
         laser_frame:
@@ -75,6 +76,8 @@ Visualization Manager:
         nb2_1/base_footprint:
           Value: true
         nb2_1/base_link:
+          Value: true
+        nb2_1/camera_link:
           Value: true
         nb2_1/imu_link:
           Value: true
@@ -91,6 +94,8 @@ Visualization Manager:
         nb2_2/base_footprint:
           Value: true
         nb2_2/base_link:
+          Value: true
+        nb2_2/camera_link:
           Value: true
         nb2_2/imu_link:
           Value: true
@@ -123,6 +128,8 @@ Visualization Manager:
             odom:
               base_footprint:
                 base_link:
+                  camera_link:
+                    {}
                   imu_link:
                     {}
                   laser_frame:
@@ -135,6 +142,8 @@ Visualization Manager:
             nb2_1/odom:
               nb2_1/base_footprint:
                 nb2_1/base_link:
+                  nb2_1/camera_link:
+                    {}
                   nb2_1/imu_link:
                     {}
                   nb2_1/laser_frame:
@@ -147,6 +156,8 @@ Visualization Manager:
             nb2_2/odom:
               nb2_2/base_footprint:
                 nb2_2/base_link:
+                  nb2_2/camera_link:
+                    {}
                   nb2_2/imu_link:
                     {}
                   nb2_2/laser_frame:
@@ -464,6 +475,10 @@ Visualization Manager:
               Show Axes: false
               Show Trail: false
               Value: true
+            camera_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
             imu_link:
               Alpha: 1
               Show Axes: false
@@ -508,6 +523,10 @@ Visualization Manager:
               Show Axes: false
               Show Trail: false
               Value: true
+            camera_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
             imu_link:
               Alpha: 1
               Show Axes: false
@@ -552,6 +571,10 @@ Visualization Manager:
               Show Axes: false
               Show Trail: false
               Value: true
+            camera_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
             imu_link:
               Alpha: 1
               Show Axes: false
@@ -1057,6 +1080,46 @@ Visualization Manager:
           Name: nb2_2
       Enabled: true
       Name: Local Cost Map
+    - Class: rviz/Group
+      Displays:
+        - Class: rviz/Image
+          Enabled: true
+          Image Topic: /camera/raw_image
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: Vedio
+          Normalize Range: true
+          Queue Size: 2
+          Transport Hint: raw
+          Unreliable: false
+          Value: true
+        - Class: rviz/Image
+          Enabled: true
+          Image Topic: /nb2_1/camera/raw_image
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: nb_1
+          Normalize Range: true
+          Queue Size: 2
+          Transport Hint: raw
+          Unreliable: false
+          Value: true
+        - Class: rviz/Image
+          Enabled: true
+          Image Topic: /nb2_2/camera/raw_image
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: nb_2
+          Normalize Range: true
+          Queue Size: 2
+          Transport Hint: raw
+          Unreliable: false
+          Value: true
+      Enabled: true
+      Name: Camera
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -1097,41 +1160,47 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 13.500499725341797
+      Distance: 11.210765838623047
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.7890400886535645
-        Y: 2.302367687225342
-        Z: -0.18654116988182068
+        X: 3.124616861343384
+        Y: 0.3524948060512543
+        Z: -0.04207824915647507
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.4447964429855347
+      Pitch: 0.7297969460487366
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.715387344360352
+      Yaw: 4.625387191772461
     Saved: ~
 Window Geometry:
   Displays:
-    collapsed: true
+    collapsed: false
   Height: 713
-  Hide Left Dock: true
+  Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd0000000400000000000001e40000026ffc0200000004fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afc0000003d0000026f0000000000fffffffaffffffff0100000002fb000000100044006900730070006c0061007900730000000000000002300000015600fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730000000000ffffffff0000009d00ffffff000000010000010f0000026ffc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d0000026f000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a0000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000005130000026f00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000000ed0000026ffc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afc0000003d000000e60000000000fffffffaffffffff0100000002fb000000100044006900730070006c0061007900730000000000000002300000015600fffffffb0000001e0054006f006f006c002000500072006f00700065007200740069006500730000000000ffffffff0000009d00fffffffb0000000a0056006500640069006f010000003d000000280000000000000000fb00000008006e0062005f0031010000006b000000cc0000000000000000fb00000008006e0062005f0032010000013d000000c70000000000000000fb00000008006e0062005f0031010000003d000000cb0000001600fffffffb0000000a0056006500640069006f010000010e000000cc0000001600fffffffb00000008006e0062005f003201000001e0000000cc0000001600ffffff000000010000010f0000026ffc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d0000026f000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004a00000003efc0100000002fb0000000800540069006d00650000000000000004a0000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000004200000026f00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
     collapsed: false
   Tool Properties:
-    collapsed: true
+    collapsed: false
+  Vedio:
+    collapsed: false
   Views:
     collapsed: false
   Width: 1299
   X: 67
   Y: 27
+  nb_1:
+    collapsed: false
+  nb_2:
+    collapsed: false

@@ -1,7 +1,7 @@
 <launch>
-	<arg name="map_1_name" default="$(find neuronbot2_multibot)/maps/changhuang_map_1.yaml" />
-    <arg name="map_2_name" default="$(find neuronbot2_multibot)/maps/changhuang_map_2.yaml" />
-    <arg name="map_3_name" default="$(find neuronbot2_multibot)/maps/changhuang_map_3.yaml" />
+	<arg name="map_1_name" default="$(find neuronbot2_multibot)/maps/chianghuang_map_1.yaml" />
+    <arg name="map_2_name" default="$(find neuronbot2_multibot)/maps/chianghuang_map_2.yaml" />
+    <arg name="map_3_name" default="$(find neuronbot2_multibot)/maps/chianghuang_map_3.yaml" />
     <include file="$(find neuronbot2_multibot)/launch/neuronbot2_nav.launch">
         <arg name="namespace" value=""/>
 	    <arg name="map_name" value="$(arg map_1_name)" />
@@ -29,5 +29,5 @@
     </include>
     <node pkg="tf2_ros" type="static_transform_publisher" name="map_tf_publisher" args="0 -4 0 0 0 0 world nb2_2/map" ns="nb2_2"/> 
     <rosparam command="load" ns="nb2_2" file="$(find neuronbot2_multibot)/params/multilayer_costmap.yaml" />
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find neuronbot2_multibot)/rviz/view_changhuang_navigation_multibot.rviz" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find neuronbot2_multibot)/rviz/view_mr_navigation_multibot.rviz" />
 </launch>

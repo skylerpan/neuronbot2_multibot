@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <sdf version='1.6'>
-  <model name='changhuang'>
+  <model name='chianghuang'>
     <pose frame=''>3.26224 0.785241 0 0 -0 0</pose>
     <link name='Wall_66'>
       <collision name='Wall_66_Collision'>

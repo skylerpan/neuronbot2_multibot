@@ -1,0 +1,8 @@
+<launch>
+    <env name="GAZEBO_MODEL_PATH" value="$(find neuronbot2_gazebo)/models"/>
+    <include file="$(find neuronbot2_multibot)/launch/mr_world.launch"/>
+    <include file="$(find neuronbot2_multibot)/launch/mr_multibot_nav.launch"/>
+    <include file="$(find neuronbot2_multibot)/launch/bt_scheduler.launch">
+        <arg name="bt_file" value="$(find neuronbot2_multibot)/cfg/chianghuang_bt.xml"/>
+    </include>
+</launch>

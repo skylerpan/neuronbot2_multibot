@@ -3,6 +3,7 @@
 #include "always_running.h"
 #include <behaviortree_cpp_v3/bt_factory.h>
 #include <behaviortree_cpp_v3/loggers/bt_cout_logger.h>
+#include <behaviortree_cpp_v3/loggers/bt_zmq_publisher.h>
 
 using namespace BT;
 
@@ -29,6 +30,7 @@ int main(int argc, char **argv) {
 
   // Create a logger
   StdCoutLogger logger_cout(tree);
+  PublisherZMQ  logger_server(tree, 512);
 
   NodeStatus status = NodeStatus::RUNNING;
   // Keep on ticking until you get either a SUCCESS or FAILURE state

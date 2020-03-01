@@ -8,6 +8,7 @@ move_base:
     robot_radius: 0.125
   
   local_costmap:
+    global_frame: world # Use world frame to combine all robot's position in the same coordinate system
     plugins:
             # - {name: simplelayer, type: "multibot_layer_namespace::MultibotLayer"}
             # - {name: gridlayer, type: "multibot_layer_namespace::GridLayer"}

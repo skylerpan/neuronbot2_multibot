@@ -1,5 +1,5 @@
 # NeuronBot2 Multibot
-## Installzation
+## Installation
 ```bash
 source /opt/ros/melodic/setup.bash
 mkdir -p ~/multibot_ws/src/neuronbot2

@@ -2,7 +2,7 @@ repositories:
   neuronbot2:
     type: git
     url: https://github.com/Adlink-ROS/neuronbot2.git
-    version: melodic-dev
+    version: 57f1fec092ff0780334a12694a3c70ba87e4abd3
   ../multibot_layer:
     type: git
     url: https://github.com/skylerpan/multibot_layer.git
